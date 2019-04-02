@@ -1,7 +1,7 @@
 package com.gperedu.spring5.reactor.event;
 
 
-import com.gperedu.spring5.reactor.CtmChannel;
+import com.gperedu.spring5.reactor.CtmSelectableChannel;
 import com.gperedu.spring5.reactor.CtmSelector;
 
 /**
@@ -13,7 +13,7 @@ public abstract class Event  {
 
     protected Event(){}
 
-    public abstract CtmChannel channel();
+    public abstract CtmSelectableChannel channel();
 
     public abstract CtmSelector selector();
 
@@ -42,6 +42,6 @@ public abstract class Event  {
         return getEventType() == OP_ACCEPT;
     }
 
-    protected abstract int getEventType();
+    public abstract int getEventType();
 
 }

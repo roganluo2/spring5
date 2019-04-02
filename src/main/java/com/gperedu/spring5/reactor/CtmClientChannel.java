@@ -7,17 +7,19 @@ import java.io.IOException;
  * @Date 2019/3/29 17:57
  * @Created by rogan.luo
  */
-public abstract class ClientCtmChannel {
+public abstract class CtmClientChannel extends CtmSelectableChannel {
 
-    public static ClientCtmChannel open() throws IOException {
+
+
+    public static CtmClientChannel open() throws IOException {
         //需要一个实现类
-        return new ClientCtmChannelImpl();
+        return new CtmClientChannelImpl();
     }
 
     //连接
     public abstract boolean connect(String ip, int port);
 
-    public abstract int read(String src);
+    public abstract int read(byte[] bytes);
 
     public abstract int write(String src);
 
