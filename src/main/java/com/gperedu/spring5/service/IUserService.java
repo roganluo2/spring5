@@ -6,5 +6,6 @@ package com.gperedu.spring5.service;
  * @Created by rogan.luo
  */
 public interface IUserService {
+    String get(String name);
 
 }
