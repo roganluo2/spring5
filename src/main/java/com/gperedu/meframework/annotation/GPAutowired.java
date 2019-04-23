@@ -1,4 +1,4 @@
-package com.gperedu.spring5.annotation;
+package com.gperedu.meframework.annotation;
 
 import java.lang.annotation.*;
 
